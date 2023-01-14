@@ -1,7 +1,8 @@
 import React from "react"
 import styles from './header.module.css'
-import todoLogo from '../../assets/Logo.svg'
+import Logo from '../../assets/Logo.svg'
 import { AiFillPlusCircle } from 'react-icons/ai'
+import { useState } from "react"
 
 
 function Header({ onAddTask }) {
@@ -21,7 +22,7 @@ function Header({ onAddTask }) {
 
     return (
         <header className={styles.header}>
-            <img src={todoLogo} alt="logo" />
+            <img src={Logo} alt="logo" />
 
             <form className={styles.newTaskForm} onSubmit={handleSubmit}>
                 <input type="text" placeholder="add a new task" value={title} onChange={onChangeTitle}/>
