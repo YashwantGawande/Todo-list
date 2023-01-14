@@ -1,6 +1,6 @@
 import React from "react"
 import styles from './header.module.css'
-import todoLogo from '../../assets/todoLogo.svg'
+import todoLogo from '/Users/user/todolist/src/assets'
 import { AiFillPlusCircle } from 'react-icons/ai'
 
 
