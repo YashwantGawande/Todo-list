@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import Header from '../src/components/Header'
 import Tasks from '../src/components/Tasks'
 
