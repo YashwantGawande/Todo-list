@@ -1,6 +1,10 @@
 import styles from './tasks.module.css'
+import Task from '../Task'
 //something here
-function Tasks(){
+function Tasks({tasks,onComplete}){
+const tasksQuantity = tasks.length
+const compleatedTasks = tasks.filter(task => task.isCompleated).length
+
     return(
         <section className={styles.tasks}>
             <header className={styles.header}>
@@ -10,11 +14,13 @@ function Tasks(){
                 </div>
                 <div>
                     <p className={styles.textPurple}>Completed</p>
-                    <span></span>
+                    <span>{compleatedTasks} of {tasksQuantity}</span>
                 </div>
             </header>
             <div className={styles.list}>
-                <Task />
+                {tasks.map(task => (
+                    <Task key={task.id} task={task} onComplete={onComplete}/>
+                ))}  
             </div>
         </section>
     )
