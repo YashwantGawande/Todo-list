@@ -1,5 +1,5 @@
 import styles from './tasks.module.css'
-import Task from '../Task'
+import Task from '../Task/Task'
 //something here
 function Tasks({tasks,onComplete}){
 const tasksQuantity = tasks.length
